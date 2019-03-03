@@ -1,0 +1,90 @@
+﻿@model WebApiSpark.Models.article
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>article</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.en_tete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.en_tete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.corpsarticle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.corpsarticle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.introduction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.introduction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.conclusion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.conclusion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_langue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_langue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_personnes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_personnes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateModification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_article }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

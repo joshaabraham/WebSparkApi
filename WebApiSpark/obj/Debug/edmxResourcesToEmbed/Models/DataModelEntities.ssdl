@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="langma146884com33525_dev_saprkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="article">
+    <Key>
+      <PropertyRef Name="id_article" />
+    </Key>
+    <Property Name="id_article" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="en_tete" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="corpsarticle" Type="varchar" MaxLength="6000" Nullable="false" />
+    <Property Name="introduction" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="conclusion" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="id_langue" Type="int" Nullable="false" />
+    <Property Name="id_personnes" Type="int" Nullable="false" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="calendrierdisponibilite">
+    <Key>
+      <PropertyRef Name="idcalendrier" />
+    </Key>
+    <Property Name="idcalendrier" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iduser" Type="int" Nullable="false" />
+    <Property Name="lundimatin" Type="smallint" Nullable="false" />
+    <Property Name="lundiapmidi" Type="smallint" Nullable="false" />
+    <Property Name="lundisoir" Type="smallint" Nullable="false" />
+    <Property Name="mardimatin" Type="smallint" Nullable="false" />
+    <Property Name="mardiapmidi" Type="smallint" Nullable="false" />
+    <Property Name="mardisoir" Type="smallint" Nullable="false" />
+    <Property Name="mercredimatin" Type="smallint" Nullable="false" />
+    <Property Name="mercrediapmidi" Type="smallint" Nullable="false" />
+    <Property Name="mercredisoir" Type="smallint" Nullable="false" />
+    <Property Name="jeudimatin" Type="smallint" Nullable="false" />
+    <Property Name="jeudiapmidi" Type="smallint" Nullable="false" />
+    <Property Name="jeudisoir" Type="smallint" Nullable="false" />
+    <Property Name="vendredimatin" Type="smallint" Nullable="false" />
+    <Property Name="vendrediapmidi" Type="smallint" Nullable="false" />
+    <Property Name="vendredisoir" Type="smallint" Nullable="false" />
+    <Property Name="weekendmatin" Type="smallint" Nullable="false" />
+    <Property Name="weekendapmidi" Type="smallint" Nullable="false" />
+    <Property Name="weekendsoir" Type="smallint" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="classificationsport">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk_main_type_sport" Type="int" Nullable="false" />
+    <Property Name="Titre" Type="varchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clubs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idcontact" Type="int" />
+    <Property Name="logo" Type="varchar" MaxLength="150" />
+    <Property Name="idsport" Type="int" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="commande">
+    <Key>
+      <PropertyRef Name="id_commande" />
+    </Key>
+    <Property Name="id_commande" Type="int" Nullable="false" />
+    <Property Name="guid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_client" Type="int" Nullable="false" />
+    <Property Name="id_fournisseur" Type="int" Nullable="false" />
+    <Property Name="dateminlivraison" Type="datetime" Nullable="false" />
+    <Property Name="datemaxlivraison" Type="datetime" Nullable="false" />
+    <Property Name="montanttotal" Type="real" Nullable="false" />
+    <Property Name="id_listproduitsachete" Type="int" Nullable="false" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="Datemodification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="companie">
+    <Key>
+      <PropertyRef Name="id_compagnie" />
+    </Key>
+    <Property Name="id_compagnie" Type="int" Nullable="false" />
+    <Property Name="guid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="id_contact" Type="int" Nullable="false" />
+    <Property Name="guid_contact" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="website" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="id_user1" Type="int" Nullable="false" />
+    <Property Name="id_user2" Type="int" Nullable="false" />
+    <Property Name="id_user3" Type="int" Nullable="false" />
+    <Property Name="logo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="idsport" Type="int" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="id_contact" />
+    </Key>
+    <Property Name="id_contact" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nocivique" Type="int" />
+    <Property Name="nomrue" Type="varchar" MaxLength="50" />
+    <Property Name="codepostal" Type="varchar" MaxLength="12" />
+    <Property Name="ville" Type="varchar" MaxLength="25" />
+    <Property Name="email" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cellphone" Type="varchar" MaxLength="25" />
+    <Property Name="homephone" Type="varchar" MaxLength="25" />
+    <Property Name="id_country" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="conversation">
+    <Key>
+      <PropertyRef Name="id_conversation" />
+    </Key>
+    <Property Name="id_conversation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_user1" Type="int" Nullable="false" />
+    <Property Name="id_user2" Type="int" Nullable="false" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="iso" Type="nvarchar" MaxLength="2" />
+    <Property Name="nom" Type="varchar" MaxLength="50" />
+    <Property Name="nicenom" Type="varchar" MaxLength="50" />
+    <Property Name="iso3" Type="nvarchar" MaxLength="3" />
+    <Property Name="numcode" Type="smallint" />
+    <Property Name="phonecode" Type="int" />
+  </EntityType>
+  <EntityType Name="dateheuredebut">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="guid" Type="nvarchar" MaxLength="50" />
+    <Property Name="datedebut" Type="datetime" />
+    <Property Name="heuredebut" Type="image" />
+    <Property Name="objetid" Type="int" />
+    <Property Name="objetguid" Type="varchar" MaxLength="50" />
+    <Property Name="DateDebutTimeStamp" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dateheurefin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="guid" Type="varchar" MaxLength="50" />
+    <Property Name="datefin" Type="datetime" />
+    <Property Name="heurefin" Type="image" />
+    <Property Name="objetid" Type="int" />
+    <Property Name="objetguid" Type="varchar" MaxLength="50" />
+    <Property Name="DateFinTimeStamp" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="equipe">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="logo" Type="varchar" MaxLength="125" />
+    <Property Name="siteweb" Type="varchar" MaxLength="120" />
+    <Property Name="id_listeJoueurEquipe" Type="varchar" MaxLength="100" />
+    <Property Name="complete" Type="smallint" />
+    <Property Name="idadmin" Type="int" Nullable="false" />
+    <Property Name="id_sport" Type="int" Nullable="false" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="evenement">
+    <Key>
+      <PropertyRef Name="id_evenement" />
+    </Key>
+    <Property Name="id_evenement" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titre" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="iduser" Type="int" Nullable="false" />
+    <Property Name="id_article" Type="int" />
+    <Property Name="description" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="introduction" Type="varchar" MaxLength="300" />
+    <Property Name="conclusion" Type="varchar" MaxLength="300" />
+    <Property Name="website" Type="varchar" MaxLength="200" />
+    <Property Name="datedebut" Type="datetime" />
+    <Property Name="datefin" Type="datetime" />
+    <Property Name="id_sport" Type="int" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="joueurs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idpersonne" Type="int" />
+    <Property Name="id_niveau" Type="int" />
+    <Property Name="ratingsatisfaction" Type="int" />
+    <Property Name="idsport" Type="int" />
+    <Property Name="idcalendrierdisponibilite" Type="int" />
+    <Property Name="idtyperencontre" Type="int" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="Datemodification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="listejoueurequipe">
+    <Key>
+      <PropertyRef Name="id_team" />
+    </Key>
+    <Property Name="id_team" Type="int" Nullable="false" />
+    <Property Name="joueur1" Type="int" />
+    <Property Name="joueur2" Type="int" />
+    <Property Name="joueur3" Type="int" />
+    <Property Name="joueur4" Type="int" />
+    <Property Name="joueur5" Type="int" />
+    <Property Name="joueur6" Type="int" />
+    <Property Name="joueur7" Type="int" />
+    <Property Name="joueur8" Type="int" />
+    <Property Name="joueur9" Type="int" />
+    <Property Name="joueur10" Type="int" />
+    <Property Name="joueur11" Type="int" />
+    <Property Name="joueur12" Type="int" />
+    <Property Name="joueur13" Type="int" />
+    <Property Name="joueur14" Type="int" />
+    <Property Name="joueur15" Type="int" />
+    <Property Name="joueur16" Type="int" />
+    <Property Name="joueur17" Type="int" />
+    <Property Name="joueur18" Type="int" />
+    <Property Name="joueur19" Type="int" />
+    <Property Name="joueur20" Type="int" />
+    <Property Name="joueur21" Type="int" />
+    <Property Name="joueur22" Type="int" />
+    <Property Name="joueur23" Type="int" />
+    <Property Name="joueur24" Type="int" />
+    <Property Name="joueur25" Type="int" />
+    <Property Name="joueur26" Type="int" />
+    <Property Name="joueur27" Type="int" />
+    <Property Name="joueur28" Type="int" />
+    <Property Name="joueur29" Type="int" />
+    <Property Name="joueur30" Type="int" />
+    <Property Name="joueur31" Type="int" />
+    <Property Name="guidteam" Type="int" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="maintypesport">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titre" Type="varchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <EntityType Name="messages">
+    <Key>
+      <PropertyRef Name="id_message" />
+    </Key>
+    <Property Name="id_message" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="textmessage" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="id_user" Type="int" Nullable="false" />
+    <Property Name="id_conversation" Type="int" Nullable="false" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="migrations">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="migration" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="batch" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="niveau">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idsport" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="idPersonne" Type="int" Nullable="false" />
+    <Property Name="niveau" Type="int" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pays">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iso" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="nicename" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="iso3" Type="nvarchar" MaxLength="3" />
+    <Property Name="numcode" Type="smallint" />
+    <Property Name="phonecode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="personnes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="prenom" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="30" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id_produit" />
+    </Key>
+    <Property Name="id_produit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="2000" Nullable="false" />
+    <Property Name="prix" Type="real" />
+    <Property Name="fraislivraison" Type="real" />
+    <Property Name="photo1" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="photo2" Type="varchar" MaxLength="150" />
+    <Property Name="photo3" Type="varchar" MaxLength="150" />
+    <Property Name="quantitedisponible" Type="int" />
+    <Property Name="idsport" Type="int" Nullable="false" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'langma146884com33525_dev_saprk.dbo.Sport_par_personne' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="Sport_par_personne">
+          <Property Name="id" Type="uniqueidentifier" />
+          <Property Name="idPersonne" Type="int" />
+          <Property Name="idSport" Type="int" />
+        </EntityType>-->
+  <EntityType Name="sports">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sporttitre" Type="varchar" MaxLength="50" />
+    <Property Name="FK_Subclasse_sport" Type="int" />
+    <Property Name="FK_classifications_sport" Type="int" />
+    <Property Name="typeSport" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="subclassessports">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fk_Classification_Sport" Type="int" Nullable="false" />
+    <Property Name="Titre" Type="varchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="image" />
+  </EntityType>
+  <EntityType Name="tb_sports">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sporttitre" Type="varchar" MaxLength="50" />
+    <Property Name="FK_Subclasse_sport" Type="int" />
+    <Property Name="FK_classifications_sport" Type="int" />
+    <Property Name="typeSport" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="typerencontre">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idPersonne" Type="int" Nullable="false" />
+    <Property Name="idSport" Type="int" Nullable="false" />
+    <Property Name="reprise" Type="smallint" />
+    <Property Name="competition" Type="smallint" />
+    <Property Name="entrainement" Type="smallint" />
+    <Property Name="amical" Type="smallint" />
+  </EntityType>
+  <EntityType Name="userslog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photo" Type="varchar" MaxLength="150" />
+    <Property Name="nom" Type="varchar" MaxLength="40" />
+    <Property Name="prenom" Type="varchar" MaxLength="40" />
+    <Property Name="sex" Type="varchar" MaxLength="10" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="telephone" Type="varchar" MaxLength="60" />
+    <Property Name="adresse" Type="varchar" MaxLength="150" />
+    <Property Name="lattitude" Type="varchar" MaxLength="25" />
+    <Property Name="longitude" Type="varchar" MaxLength="25" />
+    <Property Name="idpersonne" Type="int" />
+    <Property Name="idcontact" Type="int" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" Nullable="false" />
+    <Property Name="age" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityContainer Name="langma146884com33525_dev_saprkModelStoreContainer">
+    <EntitySet Name="article" EntityType="Self.article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="calendrierdisponibilite" EntityType="Self.calendrierdisponibilite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="classificationsport" EntityType="Self.classificationsport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clubs" EntityType="Self.clubs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="commande" EntityType="Self.commande" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="companie" EntityType="Self.companie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contact" EntityType="Self.contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="conversation" EntityType="Self.conversation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="country" EntityType="Self.country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dateheuredebut" EntityType="Self.dateheuredebut" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dateheurefin" EntityType="Self.dateheurefin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="equipe" EntityType="Self.equipe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="evenement" EntityType="Self.evenement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="joueurs" EntityType="Self.joueurs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="listejoueurequipe" EntityType="Self.listejoueurequipe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="maintypesport" EntityType="Self.maintypesport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="messages" EntityType="Self.messages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="migrations" EntityType="Self.migrations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="niveau" EntityType="Self.niveau" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pays" EntityType="Self.pays" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="personnes" EntityType="Self.personnes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sports" EntityType="Self.sports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="subclassessports" EntityType="Self.subclassessports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_sports" EntityType="Self.tb_sports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="typerencontre" EntityType="Self.typerencontre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userslog" EntityType="Self.userslog" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

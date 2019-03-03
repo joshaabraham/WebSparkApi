@@ -1,0 +1,178 @@
+﻿@model WebApiSpark.Models.calendrierdisponibilite
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>calendrierdisponibilite</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.iduser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.iduser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lundimatin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lundimatin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lundiapmidi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lundiapmidi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lundisoir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lundisoir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mardimatin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mardimatin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mardiapmidi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mardiapmidi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mardisoir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mardisoir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mercredimatin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mercredimatin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mercrediapmidi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mercrediapmidi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mercredisoir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mercredisoir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jeudimatin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jeudimatin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jeudiapmidi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jeudiapmidi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jeudisoir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jeudisoir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vendredimatin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vendredimatin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vendrediapmidi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vendrediapmidi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vendredisoir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vendredisoir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.weekendmatin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weekendmatin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.weekendapmidi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weekendapmidi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.weekendsoir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weekendsoir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateModification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idcalendrier }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

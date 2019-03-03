@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WebApiSpark.Models.article>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.titre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.en_tete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.corpsarticle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.introduction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.conclusion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_langue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_personnes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.titre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.en_tete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.corpsarticle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.introduction)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.conclusion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_langue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_personnes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateModification)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_article }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_article }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_article })
+        </td>
+    </tr>
+}
+
+</table>

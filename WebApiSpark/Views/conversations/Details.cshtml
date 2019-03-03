@@ -1,0 +1,50 @@
+﻿@model WebApiSpark.Models.conversation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>conversation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_user1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_user1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_user2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_user2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateModification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_conversation }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

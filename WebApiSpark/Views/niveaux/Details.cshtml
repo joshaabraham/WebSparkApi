@@ -1,0 +1,58 @@
+﻿@model WebApiSpark.Models.niveau
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>niveau</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idsport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idsport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idPersonne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idPersonne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.niveau1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.niveau1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateModification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

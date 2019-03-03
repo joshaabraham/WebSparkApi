@@ -1,0 +1,98 @@
+﻿@model WebApiSpark.Models.contact
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>contact</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nocivique)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nocivique)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomrue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomrue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codepostal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codepostal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ville)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ville)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cellphone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cellphone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.homephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.homephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateModification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_contact }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

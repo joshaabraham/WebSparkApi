@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebApiSpark.Models.typerencontre>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idPersonne)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idSport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reprise)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.competition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entrainement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amical)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idPersonne)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idSport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reprise)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.competition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.entrainement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.amical)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

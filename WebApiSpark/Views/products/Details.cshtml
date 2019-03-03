@@ -1,0 +1,106 @@
+﻿@model WebApiSpark.Models.product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prix)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prix)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fraislivraison)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fraislivraison)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photo1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photo2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photo3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantitedisponible)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantitedisponible)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idsport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idsport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateModification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_produit }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,114 @@
+﻿@model WebApiSpark.Models.evenement
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>evenement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.iduser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.iduser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_article)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_article)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.introduction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.introduction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.conclusion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.conclusion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.website)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.website)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datedebut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datedebut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datefin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datefin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_sport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_sport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateModification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_evenement }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model WebApiSpark.Models.messages
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>messages</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.textmessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.textmessage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_user)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_user)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_conversation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_conversation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateModification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_message }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

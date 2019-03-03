@@ -1,0 +1,147 @@
+﻿@model IEnumerable<WebApiSpark.Models.calendrierdisponibilite>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.iduser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lundimatin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lundiapmidi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lundisoir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mardimatin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mardiapmidi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mardisoir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mercredimatin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mercrediapmidi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mercredisoir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jeudimatin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jeudiapmidi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jeudisoir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vendredimatin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vendrediapmidi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vendredisoir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.weekendmatin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.weekendapmidi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.weekendsoir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.iduser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lundimatin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lundiapmidi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lundisoir)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mardimatin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mardiapmidi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mardisoir)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mercredimatin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mercrediapmidi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mercredisoir)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jeudimatin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jeudiapmidi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jeudisoir)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vendredimatin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vendrediapmidi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vendredisoir)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.weekendmatin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.weekendapmidi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.weekendsoir)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateModification)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idcalendrier }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idcalendrier }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idcalendrier })
+        </td>
+    </tr>
+}
+
+</table>

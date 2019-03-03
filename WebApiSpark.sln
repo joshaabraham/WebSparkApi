@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiSpark", "WebApiSpark\WebApiSpark.csproj", "{061A5F87-C736-49BA-9B5C-53F6A9F21D2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{061A5F87-C736-49BA-9B5C-53F6A9F21D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061A5F87-C736-49BA-9B5C-53F6A9F21D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061A5F87-C736-49BA-9B5C-53F6A9F21D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061A5F87-C736-49BA-9B5C-53F6A9F21D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A390208-71A4-4138-80A1-FC9717501C31}
+	EndGlobalSection
+EndGlobal

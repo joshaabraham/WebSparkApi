@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="langma146884com33525_dev_saprkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="article">
+    <Key>
+      <PropertyRef Name="id_article" />
+    </Key>
+    <Property Name="id_article" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="en_tete" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="corpsarticle" Type="String" MaxLength="6000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="introduction" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="conclusion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_langue" Type="Int32" Nullable="false" />
+    <Property Name="id_personnes" Type="Int32" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="calendrierdisponibilite">
+    <Key>
+      <PropertyRef Name="idcalendrier" />
+    </Key>
+    <Property Name="idcalendrier" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iduser" Type="Int32" Nullable="false" />
+    <Property Name="lundimatin" Type="Int16" Nullable="false" />
+    <Property Name="lundiapmidi" Type="Int16" Nullable="false" />
+    <Property Name="lundisoir" Type="Int16" Nullable="false" />
+    <Property Name="mardimatin" Type="Int16" Nullable="false" />
+    <Property Name="mardiapmidi" Type="Int16" Nullable="false" />
+    <Property Name="mardisoir" Type="Int16" Nullable="false" />
+    <Property Name="mercredimatin" Type="Int16" Nullable="false" />
+    <Property Name="mercrediapmidi" Type="Int16" Nullable="false" />
+    <Property Name="mercredisoir" Type="Int16" Nullable="false" />
+    <Property Name="jeudimatin" Type="Int16" Nullable="false" />
+    <Property Name="jeudiapmidi" Type="Int16" Nullable="false" />
+    <Property Name="jeudisoir" Type="Int16" Nullable="false" />
+    <Property Name="vendredimatin" Type="Int16" Nullable="false" />
+    <Property Name="vendrediapmidi" Type="Int16" Nullable="false" />
+    <Property Name="vendredisoir" Type="Int16" Nullable="false" />
+    <Property Name="weekendmatin" Type="Int16" Nullable="false" />
+    <Property Name="weekendapmidi" Type="Int16" Nullable="false" />
+    <Property Name="weekendsoir" Type="Int16" Nullable="false" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="classificationsport">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_main_type_sport" Type="Int32" Nullable="false" />
+    <Property Name="Titre" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clubs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idcontact" Type="Int32" />
+    <Property Name="logo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="idsport" Type="Int32" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="commande">
+    <Key>
+      <PropertyRef Name="id_commande" />
+    </Key>
+    <Property Name="id_commande" Type="Int32" Nullable="false" />
+    <Property Name="guid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_client" Type="Int32" Nullable="false" />
+    <Property Name="id_fournisseur" Type="Int32" Nullable="false" />
+    <Property Name="dateminlivraison" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="datemaxlivraison" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="montanttotal" Type="Single" Nullable="false" />
+    <Property Name="id_listproduitsachete" Type="Int32" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Datemodification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="companie">
+    <Key>
+      <PropertyRef Name="id_compagnie" />
+    </Key>
+    <Property Name="id_compagnie" Type="Int32" Nullable="false" />
+    <Property Name="guid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_contact" Type="Int32" Nullable="false" />
+    <Property Name="guid_contact" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="website" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_user1" Type="Int32" Nullable="false" />
+    <Property Name="id_user2" Type="Int32" Nullable="false" />
+    <Property Name="id_user3" Type="Int32" Nullable="false" />
+    <Property Name="logo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idsport" Type="Int32" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="id_contact" />
+    </Key>
+    <Property Name="id_contact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nocivique" Type="Int32" />
+    <Property Name="nomrue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="codepostal" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ville" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cellphone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="homephone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="id_country" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="conversation">
+    <Key>
+      <PropertyRef Name="id_conversation" />
+    </Key>
+    <Property Name="id_conversation" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_user1" Type="Int32" Nullable="false" />
+    <Property Name="id_user2" Type="Int32" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="iso" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nicenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="iso3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="numcode" Type="Int16" />
+    <Property Name="phonecode" Type="Int32" />
+  </EntityType>
+  <EntityType Name="dateheuredebut">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="guid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datedebut" Type="DateTime" Precision="3" />
+    <Property Name="heuredebut" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="objetid" Type="Int32" />
+    <Property Name="objetguid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateDebutTimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="dateheurefin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="guid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datefin" Type="DateTime" Precision="3" />
+    <Property Name="heurefin" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="objetid" Type="Int32" />
+    <Property Name="objetguid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateFinTimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="equipe">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="logo" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+    <Property Name="siteweb" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="id_listeJoueurEquipe" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="complete" Type="Int16" />
+    <Property Name="idadmin" Type="Int32" Nullable="false" />
+    <Property Name="id_sport" Type="Int32" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="evenement">
+    <Key>
+      <PropertyRef Name="id_evenement" />
+    </Key>
+    <Property Name="id_evenement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iduser" Type="Int32" Nullable="false" />
+    <Property Name="id_article" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="introduction" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="conclusion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="website" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="datedebut" Type="DateTime" Precision="3" />
+    <Property Name="datefin" Type="DateTime" Precision="3" />
+    <Property Name="id_sport" Type="Int32" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="joueurs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idpersonne" Type="Int32" />
+    <Property Name="id_niveau" Type="Int32" />
+    <Property Name="ratingsatisfaction" Type="Int32" />
+    <Property Name="idsport" Type="Int32" />
+    <Property Name="idcalendrierdisponibilite" Type="Int32" />
+    <Property Name="idtyperencontre" Type="Int32" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Datemodification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="listejoueurequipe">
+    <Key>
+      <PropertyRef Name="id_team" />
+    </Key>
+    <Property Name="id_team" Type="Int32" Nullable="false" />
+    <Property Name="joueur1" Type="Int32" />
+    <Property Name="joueur2" Type="Int32" />
+    <Property Name="joueur3" Type="Int32" />
+    <Property Name="joueur4" Type="Int32" />
+    <Property Name="joueur5" Type="Int32" />
+    <Property Name="joueur6" Type="Int32" />
+    <Property Name="joueur7" Type="Int32" />
+    <Property Name="joueur8" Type="Int32" />
+    <Property Name="joueur9" Type="Int32" />
+    <Property Name="joueur10" Type="Int32" />
+    <Property Name="joueur11" Type="Int32" />
+    <Property Name="joueur12" Type="Int32" />
+    <Property Name="joueur13" Type="Int32" />
+    <Property Name="joueur14" Type="Int32" />
+    <Property Name="joueur15" Type="Int32" />
+    <Property Name="joueur16" Type="Int32" />
+    <Property Name="joueur17" Type="Int32" />
+    <Property Name="joueur18" Type="Int32" />
+    <Property Name="joueur19" Type="Int32" />
+    <Property Name="joueur20" Type="Int32" />
+    <Property Name="joueur21" Type="Int32" />
+    <Property Name="joueur22" Type="Int32" />
+    <Property Name="joueur23" Type="Int32" />
+    <Property Name="joueur24" Type="Int32" />
+    <Property Name="joueur25" Type="Int32" />
+    <Property Name="joueur26" Type="Int32" />
+    <Property Name="joueur27" Type="Int32" />
+    <Property Name="joueur28" Type="Int32" />
+    <Property Name="joueur29" Type="Int32" />
+    <Property Name="joueur30" Type="Int32" />
+    <Property Name="joueur31" Type="Int32" />
+    <Property Name="guidteam" Type="Int32" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="maintypesport">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titre" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="messages">
+    <Key>
+      <PropertyRef Name="id_message" />
+    </Key>
+    <Property Name="id_message" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="textmessage" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_user" Type="Int32" Nullable="false" />
+    <Property Name="id_conversation" Type="Int32" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="migrations">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="migration" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="niveau">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idsport" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idPersonne" Type="Int32" Nullable="false" />
+    <Property Name="niveau1" Type="Int32" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="pays">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iso" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nicename" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iso3" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="numcode" Type="Int16" />
+    <Property Name="phonecode" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="personnes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prenom" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id_produit" />
+    </Key>
+    <Property Name="id_produit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prix" Type="Single" />
+    <Property Name="fraislivraison" Type="Single" />
+    <Property Name="photo1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="photo2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="photo3" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="quantitedisponible" Type="Int32" />
+    <Property Name="idsport" Type="Int32" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="sports">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sporttitre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FK_Subclasse_sport" Type="Int32" />
+    <Property Name="FK_classifications_sport" Type="Int32" />
+    <Property Name="typeSport" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="subclassessports">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fk_Classification_Sport" Type="Int32" Nullable="false" />
+    <Property Name="Titre" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tb_sports">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sporttitre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FK_Subclasse_sport" Type="Int32" />
+    <Property Name="FK_classifications_sport" Type="Int32" />
+    <Property Name="typeSport" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="typerencontre">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idPersonne" Type="Int32" Nullable="false" />
+    <Property Name="idSport" Type="Int32" Nullable="false" />
+    <Property Name="reprise" Type="Int16" />
+    <Property Name="competition" Type="Int16" />
+    <Property Name="entrainement" Type="Int16" />
+    <Property Name="amical" Type="Int16" />
+  </EntityType>
+  <EntityType Name="userslog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="photo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="nom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="prenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="sex" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telephone" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="adresse" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="lattitude" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="longitude" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="idpersonne" Type="Int32" />
+    <Property Name="idcontact" Type="Int32" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="age" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="langma146884com33525_dev_saprkEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="article" EntityType="Self.article" />
+    <EntitySet Name="calendrierdisponibilite" EntityType="Self.calendrierdisponibilite" />
+    <EntitySet Name="classificationsport" EntityType="Self.classificationsport" />
+    <EntitySet Name="clubs" EntityType="Self.clubs" />
+    <EntitySet Name="commande" EntityType="Self.commande" />
+    <EntitySet Name="companie" EntityType="Self.companie" />
+    <EntitySet Name="contact" EntityType="Self.contact" />
+    <EntitySet Name="conversation" EntityType="Self.conversation" />
+    <EntitySet Name="country" EntityType="Self.country" />
+    <EntitySet Name="dateheuredebut" EntityType="Self.dateheuredebut" />
+    <EntitySet Name="dateheurefin" EntityType="Self.dateheurefin" />
+    <EntitySet Name="equipe" EntityType="Self.equipe" />
+    <EntitySet Name="evenement" EntityType="Self.evenement" />
+    <EntitySet Name="joueurs" EntityType="Self.joueurs" />
+    <EntitySet Name="listejoueurequipe" EntityType="Self.listejoueurequipe" />
+    <EntitySet Name="maintypesport" EntityType="Self.maintypesport" />
+    <EntitySet Name="messages" EntityType="Self.messages" />
+    <EntitySet Name="migrations" EntityType="Self.migrations" />
+    <EntitySet Name="niveau" EntityType="Self.niveau" />
+    <EntitySet Name="pays" EntityType="Self.pays" />
+    <EntitySet Name="personnes" EntityType="Self.personnes" />
+    <EntitySet Name="product" EntityType="Self.product" />
+    <EntitySet Name="sports" EntityType="Self.sports" />
+    <EntitySet Name="subclassessports" EntityType="Self.subclassessports" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tb_sports" EntityType="Self.tb_sports" />
+    <EntitySet Name="typerencontre" EntityType="Self.typerencontre" />
+    <EntitySet Name="userslog" EntityType="Self.userslog" />
+  </EntityContainer>
+</Schema>

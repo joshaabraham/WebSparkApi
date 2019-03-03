@@ -1,0 +1,87 @@
+﻿@model IEnumerable<WebApiSpark.Models.contact>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nocivique)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomrue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codepostal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ville)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cellphone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.homephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nocivique)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomrue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codepostal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ville)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cellphone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.homephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateModification)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_contact }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_contact }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_contact })
+        </td>
+    </tr>
+}
+
+</table>

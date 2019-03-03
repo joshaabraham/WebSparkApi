@@ -1,0 +1,50 @@
+﻿@model WebApiSpark.Models.tb_sports
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tb_sports</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sporttitre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sporttitre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FK_Subclasse_sport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FK_Subclasse_sport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FK_classifications_sport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FK_classifications_sport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typeSport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.typeSport)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

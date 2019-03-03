@@ -1,0 +1,82 @@
+﻿@model WebApiSpark.Models.joueurs
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>joueurs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idpersonne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idpersonne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_niveau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_niveau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ratingsatisfaction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ratingsatisfaction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idsport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idsport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idcalendrierdisponibilite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idcalendrierdisponibilite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idtyperencontre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idtyperencontre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datemodification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datemodification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

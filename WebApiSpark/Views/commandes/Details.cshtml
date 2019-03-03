@@ -1,0 +1,90 @@
+﻿@model WebApiSpark.Models.commande
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>commande</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.guid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.guid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_client)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_fournisseur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_fournisseur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateminlivraison)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateminlivraison)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datemaxlivraison)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datemaxlivraison)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.montanttotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.montanttotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_listproduitsachete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_listproduitsachete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datemodification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datemodification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_commande }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

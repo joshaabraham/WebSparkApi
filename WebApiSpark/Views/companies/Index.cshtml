@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebApiSpark.Models.companie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.guid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guid_contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.website)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_user1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_user2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_user3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.logo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idsport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.guid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.guid_contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.website)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_user1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_user2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_user3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.logo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idsport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateModification)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_compagnie }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_compagnie }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_compagnie })
+        </td>
+    </tr>
+}
+
+</table>

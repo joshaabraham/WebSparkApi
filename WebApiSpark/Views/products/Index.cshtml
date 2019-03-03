@@ -1,0 +1,93 @@
+﻿@model IEnumerable<WebApiSpark.Models.product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prix)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fraislivraison)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantitedisponible)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idsport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateModification)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prix)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fraislivraison)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantitedisponible)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idsport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateModification)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_produit }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_produit }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_produit })
+        </td>
+    </tr>
+}
+
+</table>
